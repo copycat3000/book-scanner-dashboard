@@ -28,6 +28,16 @@ time log.
 
 ## Activity
 
+### 2026-10-16 — Josiah
+
+- **Area:** Shared project records
+- **Worked on:** Explicitly identified the active Book Scanner conversation as
+  Josiah's and started a new recorded session.
+- **Result:** The stale Dad session was closed under the one-hour inactivity
+  rule; future work in this session is attributed to Josiah.
+- **Next step:** Continue recording meaningful Book Scanner work as it is
+  discussed or completed.
+
 ### 2026-10-16 — Dad
 
 - **Area:** Time-record identity correction
@@ -43,6 +53,14 @@ time log.
   project-message timestamps and synchronize the private tracking documents.
 
 ### 2026-10-15 — Josiah
+
+- **Area:** Dashboard sharing
+- **Worked on:** Set the public GitHub Pages address as the canonical Book
+  Scanner dashboard link for both Josiah and Dad.
+- **Result:** Future dashboard requests now use the no-login public address,
+  rather than a private file link that can show a 404 page.
+- **Next step:** Keep the public dashboard synchronized whenever a session or
+  activity record changes.
 
 - **Area:** Public project dashboard
 - **Worked on:** Approved a no-login publishing route for the shared time and
