@@ -20,6 +20,15 @@ time log.
 
 ### 2026-10-15 — Josiah
 
+- **Area:** Public project dashboard
+- **Worked on:** Approved a no-login publishing route for the shared time and
+  activity dashboard while retaining the scanner software and engineering
+  repository as private.
+- **Result:** Created the public dashboard-only publication workflow. It
+  exports exactly the dashboard, session log, activity log, and public README.
+- **Next step:** Keep the public export synchronized after each recorded
+  time/activity update and use the GitHub Pages link to view it without login.
+
 - **Area:** Dashboard data integrity
 - **Worked on:** Made the dashboard's contributor list and all project-time
   and activity content explicitly Markdown-sourced.
