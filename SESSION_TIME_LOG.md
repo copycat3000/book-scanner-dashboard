@@ -6,18 +6,36 @@ keyboard.
 
 ## Recording rules
 
-- Add one row per active project-conversation session.
-- Update the current row whenever a project session starts, stops, resumes, or
-  reaches another one-hour checkpoint while messages are actively being sent.
-- A session ends after a gap of more than one hour without a project message;
-  finalize that row when the next project session starts or when the log is
-  next accessed.
-- `Minutes` is the elapsed session estimate, rounded to the nearest minute.
-- Use the person's chosen display name consistently (`Josiah` or `Dad`).
-- Record local timezone with the timestamps.
-- Every time this record changes, regenerate `PROJECT_TIME_DASHBOARD.html` with
-  `python3 tools/update_project_time_dashboard.py`, commit the record and
-  dashboard together, and push them to `origin/main` when authenticated.
+- A Book Scanner project message from an explicitly identified `Dad` or
+  `Josiah` starts, resumes, or checkpoints that person's session at the
+  message timestamp.
+- Identity must be explicit. Never infer whether a message belongs to Dad or
+  Josiah from a computer name, operating-system account, ChatGPT account,
+  GitHub account, device, browser profile, or prior session. The `Computer`
+  column is provenance only and does not establish session ownership.
+- Preserve message timestamps at the finest precision actually available,
+  including seconds and local timezone when the source exposes them. Never
+  invent sub-minute precision. `Minutes` is calculated from the recorded
+  timestamps and may be fractional; do not manually round away available
+  precision.
+- If the next project message from that person is less than 60 minutes after
+  the previous project message, checkpoint the same session at the new message
+  timestamp.
+- If the next project message from that person arrives after **60 minutes or
+  more of silence**, close the previous session at exactly **one hour before
+  the new message timestamp**, then start a new session at the new message
+  timestamp. This implements Bruce's rule of subtracting the final unattended
+  hour.
+- Apply closure retroactively when the next message makes the silence gap
+  observable. Do not claim background observation, a silently running timer,
+  or an automatic stop that was not actually performed by separate automation.
+- Preserve all verified historical rows. Do not reassign a disputed historical
+  session to Dad or Josiah without evidence.
+- Every record change must regenerate the dashboard from the Markdown sources,
+  synchronize the matching private-repository copies, export the public-only
+  files, commit the source records and generated dashboard together, and push
+  the appropriate `main` branch(es). A record update is incomplete until the
+  canonical public dashboard reflects it.
 - Never put passwords, access tokens, or other secrets in this file.
 
 ## Activity tracking rules
@@ -27,7 +45,9 @@ keyboard.
 - Record both work completed and significant work investigated/tested, distinguishing the two when useful.
 - Make the summaries specific enough that either person can ask what Dad or Josiah worked on or accomplished on a given day.
 - Do not infer unattended work; only record project activity evidenced by the conversation or repository changes.
-- When asked what someone did today, read this file and summarize that person's activity entries for the requested date.
+- When Dad or Josiah asks about today's time/work or asks for the dashboard,
+  return the canonical public dashboard link first, then answer from the
+  current dashboard/source data for the requested local date.
 
 ## Dashboard metadata
 
@@ -51,18 +71,18 @@ No Dad session or activity entry has been recorded for 2026-10-15.
 
 ## Query convention
 
-When asked how much time a person spent on the project, read this file and sum
-`Minutes` for that person's local date. An `ongoing` row may be estimated from
-the current message timestamp, but must not be presented as exact background
-tracking.
+When asked how much time a person spent on the project, return the canonical
+public dashboard link first, read the current synchronized sources, and sum
+`Minutes` for that person's local date. A current message may checkpoint an
+open row at its timestamp, but no interval may be presented as background
+observation.
 
 ## Important limitation
 
-This is not a background timer. ChatGPT must read this file before answering a
-time question and update the current session at session start, session stop,
-resume, and active one-hour checkpoints. Each computer must have its own
-authenticated GitHub access if it is expected to commit and push rows. Shared
-read access lets both people inspect the log; it does not grant either computer
-permission to write. No chat assistant can reliably perform a silent GitHub
-push after an hour with no messages unless a separately configured local
-automation is running.
+This is message-driven accounting, not a background timer. A chat assistant can
+only checkpoint or close a session when a later observable event supplies a
+timestamp. Each computer must have authenticated GitHub access if it is
+expected to commit and push rows. Shared read access lets both people inspect
+the log; it does not grant either computer permission to write. No chat
+assistant can reliably perform a silent GitHub push during an hour with no
+messages unless separately configured local automation is actually running.

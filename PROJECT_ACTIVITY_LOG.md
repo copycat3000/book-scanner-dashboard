@@ -6,15 +6,25 @@ time log.
 
 ## Recording rules
 
-- Add an entry whenever someone starts a meaningful project task or finishes a
-  meaningful task.
-- Use the person's display name consistently: `Josiah` or `Dad`.
+- A Book Scanner project message from an explicitly identified `Dad` or
+  `Josiah` starts, resumes, or checkpoints that person's activity at the
+  message timestamp. Add or update an entry when the message provides evidence
+  of meaningful project work.
+- Use only the explicitly supplied display name: `Josiah` or `Dad`. Never
+  infer identity from a computer, operating-system account, ChatGPT account,
+  GitHub account, device, browser profile, or prior session.
 - Include the local date, approximate time, area worked on, work performed,
   result, and next step or blocker.
 - Keep entries factual and concise. Do not record passwords, tokens, or other
   private credentials.
 - Do not claim that a physical test, GitHub push, or software change happened
   unless it actually happened.
+- Preserve verified historical entries, and do not reassign disputed work to
+  Dad or Josiah without evidence.
+- Keep each activity entry consistent with its matching session row. Every
+  record change must regenerate and synchronize the public dashboard and push
+  the appropriate private/public `main` branch(es); the update is incomplete
+  until the canonical public dashboard reflects it.
 
 ## Activity
 
@@ -74,9 +84,11 @@ time log.
 
 ## Query convention
 
-When asked what someone worked on today, read this file and list that person's
-entries for today's local date. Distinguish completed work, work in progress,
-and blockers. Use Git history to verify repository changes when useful.
+When Dad or Josiah asks what someone worked on today or asks for the dashboard,
+return the canonical public dashboard link first, then read the current
+synchronized source data and list that person's entries for today's local
+date. Distinguish completed work, work in progress, and blockers. Use Git
+history to verify repository changes when useful.
 
 ## Important limitation
 
