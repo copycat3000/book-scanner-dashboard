@@ -32,9 +32,11 @@ time log.
 
 - **Area:** Shared project records
 - **Worked on:** Explicitly identified the active Book Scanner conversation as
-  Josiah's and started a new recorded session.
+  Josiah's and corrected the current session to include the earlier editor and
+  workflow-improvement request from 15:08 CDT.
 - **Result:** The stale Dad session was closed under the one-hour inactivity
-  rule; future work in this session is attributed to Josiah.
+  rule; the current Josiah session is checkpointed from its first observed
+  project message and future work remains attributed to Josiah.
 - **Next step:** Continue recording meaningful Book Scanner work as it is
   discussed or completed.
 
