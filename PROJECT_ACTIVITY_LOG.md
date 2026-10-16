@@ -36,10 +36,11 @@ time log.
 - **Result:** Removed the incorrect overnight Dad attribution. Josiah's session
   is closed at 00:24 and split at midnight for correct daily totals. Under the
   selected silence rule, Dad's earlier session ran from 10:16:37 to 10:18:20,
-  and Dad's correction message started a new session at 11:18:20.
+  and Dad's correction message started a new session at 11:18:20. Dad then
+  accepted both GitHub invitations, restoring public-dashboard write access;
+  the session was checkpointed at 11:33:49.
 - **Next step:** Keep checkpointing Dad's current session from observable
-  project-message timestamps and publish the prepared private/public record
-  changes when repository write access is available.
+  project-message timestamps and synchronize the private tracking documents.
 
 ### 2026-10-15 — Josiah
 
