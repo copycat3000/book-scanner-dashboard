@@ -13,10 +13,16 @@ time log.
 - Use only the explicitly supplied display name: `Josiah` or `Dad`. Never
   infer identity from a computer, operating-system account, ChatGPT account,
   GitHub account, device, browser profile, or prior session.
-- Include the local date, approximate time, area worked on, work performed,
-  result, and next step or blocker.
-- Keep entries factual and concise. Do not record passwords, tokens, or other
-  private credentials.
+- Make every entry useful to another agent who was not in the conversation.
+  Include the local date/time, area, goal, work performed, concrete files or
+  components affected, result/decision, verification performed, limitations,
+  and the next specific step or blocker.
+- Use the existing **Area**, **Worked on**, **Result**, and **Next step** labels
+  so the public dashboard can render the entry. Put the goal, technical detail,
+  verification, decisions, and limitations into those fields in complete
+  sentences; do not rely on vague statements such as "worked on UI".
+- Keep entries factual and detailed enough to summarize accurately. Do not
+  record passwords, tokens, or other private credentials.
 - Do not claim that a physical test, GitHub push, or software change happened
   unless it actually happened.
 - Preserve verified historical entries, and do not reassign disputed work to
@@ -29,6 +35,26 @@ time log.
 ## Activity
 
 ### 2026-10-16 — Josiah
+
+- **Area:** Node-editor workflow, camera workspace, and machine activity data
+- **Worked on:** Goal: make the browser editor easier to return to after
+  capture work and reduce the need to rebuild workflows. Added a browser-local
+  named graph library with Save, Save as, New, Open, and Delete; added
+  Ctrl/Cmd+S to save, Ctrl/Cmd+D to duplicate the selected node, Home to fit
+  the graph, Escape to return from gallery/live-preview overlays, smoother
+  node/port/wire feedback, and a dismissible capture notice positioned above
+  the bottom bar. Updated `index.html`, `studio.js`, and `studio.css`.
+- **Result:** Added a local Pi-side `machine-activity.json` ledger and
+  `/api/machine-metrics` endpoint in `server.py`. The UI now displays
+  successful saved-photo totals plus puffer and light on/off transition totals.
+  A count changes only after the existing camera/Pico request reports success;
+  it is an operator activity record, not a safety interlock or hardware audit.
+- **Next step:** Deploy all four UI/server files to the Pi together, restart
+  the universal-nodes service, then verify one saved photo, one puffer cycle,
+  and one light cycle update the bottom activity strip. Verification so far:
+  Python syntax compilation, all 27 Python tests, and whitespace validation
+  passed; browser/node tests could not run on this computer because Node.js is
+  not installed.
 
 - **Area:** Shared project records
 - **Worked on:** Explicitly identified the active Book Scanner conversation as
