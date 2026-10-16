@@ -28,6 +28,21 @@ time log.
 
 ## Activity
 
+### 2026-10-16 — Dad
+
+- **Area:** Time and activity tracking
+- **Worked on:** Directed the Book Scanner records to use precise observable
+  message timestamps, explicit Dad/Josiah identity, the 60-minute silence
+  boundary, and mandatory public-dashboard synchronization; then explicitly
+  identified himself as Dad for this conversation.
+- **Result:** Dad's earlier same-conversation messages can now be attributed
+  without relying on a computer or account label. Under the selected rule, the
+  00:24:07 session closed at 09:16:37, exactly one hour before the 10:16:37
+  message, and a new session began at 10:16:37.
+- **Next step:** Keep checkpointing Dad's current session from observable
+  project-message timestamps and publish the prepared private/public record
+  changes when repository write access is available.
+
 ### 2026-10-15 — Josiah
 
 - **Area:** Public project dashboard

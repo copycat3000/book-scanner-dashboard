@@ -66,8 +66,12 @@ the generated HTML.
 | 2026-10-15 | Josiah | Copycat | 15:45 CDT | 16:00 CDT | 15 | Initial active conversation session; UI and hardware-control work recorded below |
 | 2026-10-15 | Josiah | Copycat | 17:55 CDT | 18:44 CDT | 45 | Resumed to repair shared-record querying; auto-closed after no response to the 45-minute check-in |
 | 2026-10-15 | Josiah | Copycat | 23:36 CDT | ongoing | 0 | Started a shared GitHub time-and-activity dashboard and mandatory push-on-record-update workflow |
+| 2026-10-16 | Dad | Codex desktop | 00:24:07 CDT | 09:16:37 CDT | 532.5 | Established the precise message-driven tracking policy and asked for today's recorded time; closed retroactively at one hour before the next message after 9:43:17 of silence |
+| 2026-10-16 | Dad | Codex desktop | 10:16:37 CDT | ongoing | 0 | Explicitly identified himself as Dad and started a new message-driven session |
 
-No Dad session or activity entry has been recorded for 2026-10-15.
+No Dad session or activity entry has been recorded for 2026-10-15. Dad's
+identity for the two 2026-10-16 sessions is established by his explicit
+statement in the same conversation.
 
 ## Query convention
 
