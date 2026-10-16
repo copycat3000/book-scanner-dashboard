@@ -40,6 +40,15 @@ time log.
 - **Next step:** Continue recording meaningful Book Scanner work as it is
   discussed or completed.
 
+- **Area:** Session tracking preference
+- **Worked on:** Chose uninterrupted background tracking for Josiah's active
+  project session.
+- **Result:** The session automation no longer asks inactivity questions or
+  closes a session after silence; it checkpoints and publishes the active
+  duration until Josiah explicitly stops it.
+- **Next step:** Use the public dashboard to review the continuously updated
+  project-time record.
+
 ### 2026-10-16 — Dad
 
 - **Area:** Time-record identity correction

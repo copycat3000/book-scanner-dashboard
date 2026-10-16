@@ -18,17 +18,12 @@ keyboard.
   invent sub-minute precision. `Minutes` is calculated from the recorded
   timestamps and may be fractional; do not manually round away available
   precision.
-- If the next project message from that person is less than 60 minutes after
-  the previous project message, checkpoint the same session at the new message
-  timestamp.
-- If the next project message from that person arrives after **60 minutes or
-  more of silence**, close the previous session at exactly **one hour before
-  the new message timestamp**, then start a new session at the new message
-  timestamp. This implements Bruce's rule of subtracting the final unattended
-  hour.
-- Apply closure retroactively when the next message makes the silence gap
-  observable. Do not claim background observation, a silently running timer,
-  or an automatic stop that was not actually performed by separate automation.
+- An explicitly started session continues as a user-approved background timer
+  until that person explicitly asks to stop it. Do not send inactivity warnings
+  and do not close a session merely because of silence.
+- The configured session automation checkpoints open rows at its heartbeat
+  timestamps. This background tracking policy was explicitly requested by
+  Josiah on 2026-10-16.
 - Preserve all verified historical rows. Do not reassign a disputed historical
   session to Dad or Josiah without evidence.
 - Every record change must regenerate the dashboard from the Markdown sources,
@@ -69,7 +64,7 @@ the generated HTML.
 | 2026-10-16 | Josiah | Copycat | 00:00 CDT | 00:24 CDT | 24 | Finished the midnight portion of the dashboard/tracking session; Dad explicitly identified 00:24 as Josiah's stop time |
 | 2026-10-16 | Dad | Codex desktop | 10:16:37 CDT | 10:18:20 CDT | 1.7167 | Explicitly identified himself as Dad; closed at exactly one hour before the next message after 1:01:43 of silence |
 | 2026-10-16 | Dad | Codex desktop | 11:18:20 CDT | 12:33:49 CDT | 75.4833 | Corrected the midnight identity/session boundary and restored repository write access; auto-closed after one hour without a further project message |
-| 2026-10-16 | Josiah | Copycat | 15:08:32 CDT | ongoing | 36.5167 | Started editor/workflow improvements; identity later confirmed as Josiah and session checkpointed at 15:45:03 CDT |
+| 2026-10-16 | Josiah | Copycat | 15:08:32 CDT | ongoing | 40.1 | Started editor/workflow improvements; identity later confirmed as Josiah and session checkpointed at 15:48:38 CDT |
 
 No Dad session or activity entry has been recorded for 2026-10-15. Dad
 explicitly corrected the identity boundary on 2026-10-16: the 00:24 message
@@ -79,22 +74,19 @@ new session starts at 11:18:20 under the selected 60-minute rule. That Dad
 session was later closed at its one-hour checkpoint after no further project
 message. Josiah later explicitly identified himself; his current session was
 corrected to the first observed Book Scanner message at 15:08:32 CDT and
-checkpointed at 15:45:03 CDT.
+checkpointed at 15:48:38 CDT. Josiah subsequently requested that active
+sessions continue as background timers without inactivity prompts or closure.
 
 ## Query convention
 
 When asked how much time a person spent on the project, return the canonical
 public dashboard link first, read the current synchronized sources, and sum
-`Minutes` for that person's local date. A current message may checkpoint an
-open row at its timestamp, but no interval may be presented as background
-observation.
+`Minutes` for that person's local date. The active-session row is updated by
+the configured, user-approved background timer.
 
 ## Important limitation
 
-This is message-driven accounting, not a background timer. A chat assistant can
-only checkpoint or close a session when a later observable event supplies a
-timestamp. Each computer must have authenticated GitHub access if it is
-expected to commit and push rows. Shared read access lets both people inspect
-the log; it does not grant either computer permission to write. No chat
-assistant can reliably perform a silent GitHub push during an hour with no
-messages unless separately configured local automation is actually running.
+Active sessions are background-timed only while the configured session
+automation is running. Each computer must have authenticated GitHub access if
+it is expected to commit and push rows. Shared read access lets both people
+inspect the log; it does not grant either computer permission to write.
