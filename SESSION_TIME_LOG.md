@@ -64,7 +64,7 @@ the generated HTML.
 | 2026-10-16 | Josiah | Copycat | 00:00 CDT | 00:24 CDT | 24 | Finished the midnight portion of the dashboard/tracking session; Dad explicitly identified 00:24 as Josiah's stop time |
 | 2026-10-16 | Dad | Codex desktop | 10:16:37 CDT | 10:18:20 CDT | 1.7167 | Explicitly identified himself as Dad; closed at exactly one hour before the next message after 1:01:43 of silence |
 | 2026-10-16 | Dad | Codex desktop | 11:18:20 CDT | 12:33:49 CDT | 75.4833 | Corrected the midnight identity/session boundary and restored repository write access; auto-closed after one hour without a further project message |
-| 2026-10-16 | Josiah | Copycat | 15:08:32 CDT | 22:29:10 CDT | 410.6333 | Started editor/workflow improvements; excludes 30 minutes spent on something else and was background-checkpointed through 22:29:10 CDT |
+| 2026-10-16 | Josiah | Copycat | 15:08:32 CDT | 22:44:09 CDT | 425.6333 | Started editor/workflow improvements; excludes 30 minutes spent on something else and was background-checkpointed through 22:44:09 CDT |
 
 No Dad session or activity entry has been recorded for 2026-10-15. Dad
 explicitly corrected the identity boundary on 2026-10-16: the 00:24 message
@@ -74,7 +74,7 @@ new session starts at 11:18:20 under the selected 60-minute rule. That Dad
 session was later closed at its one-hour checkpoint after no further project
 message. Josiah later explicitly identified himself; his current session was
 corrected to the first observed Book Scanner message at 15:08:32 CDT and
-manually adjusted at 16:38:01 CDT to exclude 30 minutes spent on something else, then background-checkpointed at 17:09:02 CDT, 18:14:10 CDT, 18:29:09 CDT, 18:44:08 CDT, and 18:59:08 CDT and 19:14:08 CDT and 19:29:11 CDT and 19:44:10 CDT and 19:59:08 CDT and 20:14:09 CDT and 20:29:10 CDT and 20:44:08 CDT and 20:59:08 CDT and 21:14:09 CDT and 21:29:12 CDT and 21:44:09 CDT and 21:59:10 CDT and 22:14:10 CDT and 22:29:10 CDT. Josiah subsequently requested that active
+manually adjusted at 16:38:01 CDT to exclude 30 minutes spent on something else, then background-checkpointed at 17:09:02 CDT, 18:14:10 CDT, 18:29:09 CDT, 18:44:08 CDT, and 18:59:08 CDT and 19:14:08 CDT and 19:29:11 CDT and 19:44:10 CDT and 19:59:08 CDT and 20:14:09 CDT and 20:29:10 CDT and 20:44:08 CDT and 20:59:08 CDT and 21:14:09 CDT and 21:29:12 CDT and 21:44:09 CDT and 21:59:10 CDT and 22:14:10 CDT and 22:29:10 CDT and 22:44:09 CDT. Josiah subsequently requested that active
 sessions continue as background timers without inactivity prompts or closure.
 
 ## Query convention
